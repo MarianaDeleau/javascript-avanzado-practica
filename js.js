@@ -283,7 +283,7 @@
 // recortar(4, ['elefante', 'dinosaurio', 'chocolate', 'avion', 'america'])
 
 
-// Ejercicio 15: Obtener resultado EN PROCESO
+// Ejercicio 15: Obtener resultado 
 // Definí una función obtenerResultado que tome por parámetros dos strings jugadoraA y jugadoraB con los nombres de cada jugadora respectivamente, y dos arrays de numeros puntajesA y puntajesB de la misma longitud. La función debe devolver un string con el nombre de la ganadora o Empate en caso de que no haya ninguna. Para eso, debe comparar las mismas posiciones de cada array de puntajes, y sumar puntos a la jugadora correspondiente dependiendo de quien tenga el puntaje más alto. Por ejemplo:
 
 // const puntajesA = [3, 5, 2]
@@ -296,78 +296,61 @@
 // Resultado final: Gana Jugadora B
 
 
+
 // const obtenerResultado = (jugadora1, jugadora2, puntajes1, puntajes2) =>{
 
 //     let puntajeFinal1=0;
 //     let puntajeFinal2=0;
-//     let puntaje=[puntajes1, puntajes2]
-    
-    
-//     for(let i=0; i<puntaje.length; i++){
+            
+//     for(let i=0; i<puntajes1.length; i++){
 //     if(puntajes1[i]<puntajes2[i]){
 //         puntajeFinal2++;
+        
 //     } else if(puntajes1[i]>puntajes2[i]){
 //         puntajeFinal1++;
 //     } else{
 
 //     }
 // }
+//     if(puntajeFinal1>puntajeFinal2){
+//         alert(`Ganó ${jugadora1}`)
+//     } else if (puntajeFinal1<puntajeFinal2){
+//         alert(`Ganó ${jugadora2}`)
+//     } else if(puntajeFinal1==puntajeFinal2){
+//         alert('Empate')
+//     }
+// console.log(puntajeFinal1)
+// console.log(puntajeFinal2)
 // }
-// obtenerResultado('Ada', 'Grace', [4, 4, 4], [1, 2, 3])
+
+//obtenerResultado('Ada', 'Grace', [4, 4, 4], [1, 2, 3])
+//obtenerResultado('Ada', 'Grace', [5, 6, 3, 1, 8], [8, 2, 4, 2, 3])
+//obtenerResultado('Ada', 'Grace', [3, 5, 5, 7], [4, 1, 2, 9])
 
 
 
 
-// const obtenerResultado = (jugadoras, puntos) => {
+//Piedra, papel, tijera III** VERSION MATI
+// - Crear un programa que permita ingresar el nombre de dos jugadoras y dos listas con los valores de la jugada en una ronda de "piedra, papel o tijera". Primero debe preguntarse el nombre de la jugadora 1, luego sus jugadas, luego el nombre de la jugadora 2, luego sus jugadas. El programa debe comparar los valores de las listas uno a uno (el primero con el primero, el segundo con el segundo) sumando un punto a la jugadora que gane la ronda. Al finalizar, mostrar quién gano y los puntajes finales. Ejemplo:
+// ```javascript
+// // Ingrese nombre jugadora 1: Ada
+// // Ingrese jugadas de Ada: piedra papel papel piedra tijera
+// // Ingrese nombre jugadora 2: Grace
+// // Ingrese puntajes de Grace: papel piedra tijera tijera papel
+// // Resultado: 3 (Ada) vs 2 (Grace)
+// // Ganadora: Ada
+// ```
+// 1- definir variables:
+//     * Nombre de jugadora1(string)
+//     * jugadas 1 (array)
+//     * Nombre de jugadora2(string)
+//     * jugadas 2 (array) 
+//     * puntaje1(number)
+//     * puntaje2(number)
+// 2- tengo recorrer cualquier array - pero tengo que tener cuidado de que tengan el mismo largo
+// 3- hay comparalos con las reglas del piedra papel y tijera y sumar puntaje
+// 4- Una vez de recorrer el array muestro resultados
 
-//     let puntajesA=[];
-//     let puntajesB=[];
-//     const puntajes=[puntajesA, puntajesB];
-
-//     for(let i=0; i<puntajes.length; i++){
-
-//         let jugadoraAPuntos= 0 ;
-//         let jugadoraBPuntos=0;
-
-//         if(puntajesA[i]<puntajesB[i]){
-//             jugadoraBPuntos++;
-//          } else if (puntajesA[i]>puntajesB[i]){
-//             jugadoraAPuntos++;
-//          } else if (puntajesA[i]===puntajesB[i]){
-//             jugadoraBPuntos=jugadoraBPuntos;
-//             jugadoraAPuntos=jugadoraAPuntos;
-//          }
-// console.log(jugadoraAPuntos);
-// console.log(jugadoraBPuntos);
-
-//     }
-
-//     }
-//     obtenerResultado('Ada', 'Grace', [4, 4, 4], [1, 2, 3])
-
-
-/*
-**Piedra, papel, tijera III** VERSION MATI
-- Crear un programa que permita ingresar el nombre de dos jugadoras y dos listas con los valores de la jugada en una ronda de "piedra, papel o tijera". Primero debe preguntarse el nombre de la jugadora 1, luego sus jugadas, luego el nombre de la jugadora 2, luego sus jugadas. El programa debe comparar los valores de las listas uno a uno (el primero con el primero, el segundo con el segundo) sumando un punto a la jugadora que gane la ronda. Al finalizar, mostrar quién gano y los puntajes finales. Ejemplo:
-```javascript
-// Ingrese nombre jugadora 1: Ada
-// Ingrese jugadas de Ada: piedra papel papel piedra tijera
-// Ingrese nombre jugadora 2: Grace
-// Ingrese puntajes de Grace: papel piedra tijera tijera papel
-// Resultado: 3 (Ada) vs 2 (Grace)
-// Ganadora: Ada
-```
-1- definir variables:
-    * Nombre de jugadora1(string)
-    * jugadas 1 (array)
-    * Nombre de jugadora2(string)
-    * jugadas 2 (array) 
-    * puntaje1(number)
-    * puntaje2(number)
-2- tengo recorrer cualquier array - pero tengo que tener cuidado de que tengan el mismo largo
-3- hay comparalos con las reglas del piedra papel y tijera y sumar puntaje
-4- Una vez de recorrer el array muestro resultados
-*/
 
 // const nombreJugadora1 = prompt("Ingrese el nombre de jugadora 1");
 // const jugadasJugadora1 = prompt("Ingrese sus jugadas").split(" ");
